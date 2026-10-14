@@ -14,7 +14,8 @@ export const dynamic = 'force-dynamic';
 export default async function AdminRootLayout({ children }: { children: ReactNode }) {
   const locale = await getLocale();
   return (
-    <html lang={locale}>
+    // Browser extensions often add attributes to <html> before React loads; ignore only those.
+    <html lang={locale} suppressHydrationWarning>
       <body className="bg-muted/40 min-h-screen">
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>

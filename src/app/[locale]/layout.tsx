@@ -73,7 +73,8 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
   const showDemo = settings.company.isDemo || dataSource === 'demo';
 
   return (
-    <html lang={locale}>
+    // Browser extensions often add attributes to <html> before React loads; ignore only those.
+    <html lang={locale} suppressHydrationWarning>
       <body className="flex min-h-screen flex-col">
         <a
           href="#main"
