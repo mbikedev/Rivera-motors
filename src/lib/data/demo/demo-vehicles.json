@@ -1,0 +1,864 @@
+{
+  "_notice": "FICTIONAL DEMO DATA. These vehicles, prices, VINs and texts are invented for demonstration purposes only. Used by the demo data source and by supabase/seed.sql.",
+  "vehicles": [
+    {
+      "id": "a1f0c3d2-0001-4c1a-9b10-000000000001",
+      "slug": "vw-golf-vii-1-4-tsi-highline-2017",
+      "make": "Volkswagen",
+      "model": "Golf",
+      "variant": "VII 1.4 TSI Highline",
+      "manufacture_year": 2017,
+      "first_registration_date": "2017-05-12",
+      "mileage_km": 118400,
+      "fuel_type": "petrol",
+      "transmission": "manual",
+      "engine_cc": 1395,
+      "power_kw": 92,
+      "body_type": "hatchback",
+      "doors": 5,
+      "seats": 5,
+      "color": "Silber",
+      "euro_standard": "Euro 6",
+      "co2_emissions_g_km": 120,
+      "vin_public": "WVWZZZAUZHW******",
+      "origin_country": "Deutschland",
+      "documents_available": "Zulassungsbescheinigung Teil I und II, 2 Schlüssel",
+      "service_history": "Scheckheft bis 2022 (lt. Vorbesitzer, nicht geprüft)",
+      "technical_inspection": "HU abgelaufen 03/2026",
+      "asking_price_eur": 6900,
+      "price_on_request": false,
+      "starts": true,
+      "drivable": true,
+      "missing_parts": "Linker Scheinwerfer fehlt",
+      "damage_assessed_at": "2026-09-02",
+      "status": "available",
+      "published_at": "2026-09-05T09:00:00Z",
+      "created_at": "2026-09-03T10:00:00Z",
+      "updated_at": "2026-09-05T09:00:00Z",
+      "translations": [
+        {
+          "locale": "de",
+          "title": "VW Golf VII 1.4 TSI Highline – Frontschaden links",
+          "damage_summary": "Unfallschaden vorne links: Stoßfänger, Kotflügel und Scheinwerfer beschädigt.",
+          "damage_details": "Stoßfänger vorne links gerissen, Kotflügel links eingedrückt, Scheinwerfer links fehlt. Motorhaube leicht verzogen, schließt aber. Airbags nicht ausgelöst.",
+          "diagnosis_notes": "Keine Fehlercodes im Motorsteuergerät bei Sichtprüfung am 02.09.2026 (OBD-Kurztest).",
+          "repair_notes": "Keine Reparaturen durchgeführt.",
+          "seo_title": "VW Golf VII 1.4 TSI mit Frontschaden – Besichtigung vor Ort",
+          "seo_description": "Unfallfahrzeug VW Golf VII, Baujahr 2017, 118.400 km, Frontschaden links. Fiktive Demo-Anzeige."
+        },
+        {
+          "locale": "en",
+          "title": "VW Golf VII 1.4 TSI Highline – front-left damage",
+          "damage_summary": "Front-left accident damage: bumper, wing and headlight damaged.",
+          "damage_details": "Front bumper cracked on the left, left wing dented, left headlight missing. Bonnet slightly bent but closes. Airbags not deployed.",
+          "diagnosis_notes": "No fault codes in the engine control unit during a visual check on 2 Sep 2026 (quick OBD test).",
+          "repair_notes": "No repairs carried out.",
+          "seo_title": "VW Golf VII 1.4 TSI with front damage – inspect on site",
+          "seo_description": "Damaged VW Golf VII, built 2017, 118,400 km, front-left damage. Fictional demo listing."
+        },
+        {
+          "locale": "fr",
+          "title": "VW Golf VII 1.4 TSI Highline – dommage avant gauche",
+          "damage_summary": "Choc avant gauche : pare-chocs, aile et phare endommagés.",
+          "damage_details": "Pare-chocs avant fendu à gauche, aile gauche enfoncée, phare gauche manquant. Capot légèrement déformé mais il ferme. Airbags non déclenchés.",
+          "diagnosis_notes": "Aucun code défaut dans le calculateur moteur lors d'un contrôle visuel le 02/09/2026 (test OBD rapide).",
+          "repair_notes": "Aucune réparation effectuée.",
+          "seo_title": "VW Golf VII 1.4 TSI accidentée à l'avant – à voir sur place",
+          "seo_description": "VW Golf VII accidentée, 2017, 118 400 km, dommage avant gauche. Annonce de démonstration fictive."
+        }
+      ],
+      "damages": [
+        {
+          "category": "body",
+          "area": "front_left",
+          "severity": "moderate",
+          "description": "Kotflügel links eingedrückt, Stoßfänger gerissen.",
+          "translations": { "en": "Left wing dented, bumper cracked.", "fr": "Aile gauche enfoncée, pare-chocs fendu." }
+        },
+        {
+          "category": "body",
+          "area": "hood",
+          "severity": "minor",
+          "description": "Motorhaube leicht verzogen.",
+          "translations": { "en": "Bonnet slightly bent.", "fr": "Capot légèrement déformé." }
+        }
+      ],
+      "media": [
+        {
+          "storage_path": "/demo/vw-golf-1.svg",
+          "media_type": "image",
+          "alt_text": "VW Golf VII, Seitenansicht (Demo-Illustration)",
+          "caption": "Seitenansicht",
+          "is_damage_view": false,
+          "is_primary": true,
+          "sort_order": 0
+        },
+        {
+          "storage_path": "/demo/vw-golf-2.svg",
+          "media_type": "image",
+          "alt_text": "Frontschaden links (Demo-Illustration)",
+          "caption": "Schaden vorne links",
+          "is_damage_view": true,
+          "is_primary": false,
+          "sort_order": 1
+        },
+        {
+          "storage_path": "/demo/vw-golf-3.svg",
+          "media_type": "image",
+          "alt_text": "Motorhaube (Demo-Illustration)",
+          "caption": "Motorhaube leicht verzogen",
+          "is_damage_view": true,
+          "is_primary": false,
+          "sort_order": 2
+        }
+      ],
+      "private": { "vin_private": "WVWZZZAUZHW000001", "internal_notes": "Demo – fiktiv" }
+    },
+    {
+      "id": "a1f0c3d2-0002-4c1a-9b10-000000000002",
+      "slug": "bmw-320d-touring-2016",
+      "make": "BMW",
+      "model": "3er",
+      "variant": "320d Touring",
+      "manufacture_year": 2016,
+      "first_registration_date": "2016-03-01",
+      "mileage_km": 176250,
+      "fuel_type": "diesel",
+      "transmission": "automatic",
+      "engine_cc": 1995,
+      "power_kw": 140,
+      "body_type": "estate",
+      "doors": 5,
+      "seats": 5,
+      "color": "Schwarz metallic",
+      "euro_standard": "Euro 6",
+      "co2_emissions_g_km": null,
+      "vin_public": null,
+      "origin_country": "Deutschland",
+      "documents_available": "Zulassungsbescheinigung Teil I und II",
+      "service_history": null,
+      "technical_inspection": "HU bis 08/2027",
+      "asking_price_eur": null,
+      "price_on_request": true,
+      "starts": true,
+      "drivable": false,
+      "missing_parts": null,
+      "damage_assessed_at": "2026-09-10",
+      "status": "available",
+      "published_at": "2026-09-12T09:00:00Z",
+      "created_at": "2026-09-11T10:00:00Z",
+      "updated_at": "2026-09-12T09:00:00Z",
+      "translations": [
+        {
+          "locale": "de",
+          "title": "BMW 320d Touring – Motorschaden",
+          "damage_summary": "Motorschaden: lautes Rasselgeräusch, Verdacht auf Steuerkette.",
+          "damage_details": "Motor springt an, zeigt aber ein deutliches Rasselgeräusch im Leerlauf. Fahrzeug wird nicht im Straßenverkehr bewegt. Karosserie ohne nennenswerte Schäden.",
+          "diagnosis_notes": "Verdacht auf gelängte Steuerkette (nicht durch Fachwerkstatt bestätigt).",
+          "repair_notes": null,
+          "seo_title": "BMW 320d Touring mit Motorschaden",
+          "seo_description": "BMW 320d Touring, 2016, 176.250 km, Motorschaden. Fiktive Demo-Anzeige."
+        },
+        {
+          "locale": "en",
+          "title": "BMW 320d Touring – engine damage",
+          "damage_summary": "Engine damage: loud rattling noise, suspected timing chain.",
+          "damage_details": "Engine starts but makes a clear rattling noise at idle. The vehicle is not being driven on public roads. Bodywork without notable damage.",
+          "diagnosis_notes": "Suspected stretched timing chain (not confirmed by a workshop).",
+          "repair_notes": null,
+          "seo_title": "BMW 320d Touring with engine damage",
+          "seo_description": "BMW 320d Touring, 2016, 176,250 km, engine damage. Fictional demo listing."
+        }
+      ],
+      "damages": [
+        {
+          "category": "engine",
+          "area": "engine_bay",
+          "severity": "severe",
+          "description": "Rasselgeräusch im Leerlauf, Verdacht auf Steuerkette.",
+          "translations": { "en": "Rattling noise at idle, suspected timing chain." }
+        }
+      ],
+      "media": [
+        {
+          "storage_path": "/demo/bmw-320d-1.svg",
+          "media_type": "image",
+          "alt_text": "BMW 320d Touring, Seitenansicht (Demo-Illustration)",
+          "caption": "Seitenansicht",
+          "is_damage_view": false,
+          "is_primary": true,
+          "sort_order": 0
+        },
+        {
+          "storage_path": "/demo/bmw-320d-2.svg",
+          "media_type": "image",
+          "alt_text": "Motorraum (Demo-Illustration)",
+          "caption": "Motorraum",
+          "is_damage_view": true,
+          "is_primary": false,
+          "sort_order": 1
+        }
+      ],
+      "private": { "vin_private": "WBA8G11000K000002", "internal_notes": "Demo – fiktiv" }
+    },
+    {
+      "id": "a1f0c3d2-0003-4c1a-9b10-000000000003",
+      "slug": "toyota-yaris-1-5-hybrid-2019",
+      "make": "Toyota",
+      "model": "Yaris",
+      "variant": "1.5 Hybrid",
+      "manufacture_year": 2019,
+      "first_registration_date": "2019-07-19",
+      "mileage_km": 64100,
+      "fuel_type": "hybrid",
+      "transmission": "automatic",
+      "engine_cc": 1497,
+      "power_kw": 74,
+      "body_type": "hatchback",
+      "doors": 5,
+      "seats": 5,
+      "color": "Weiß",
+      "euro_standard": "Euro 6d-TEMP",
+      "co2_emissions_g_km": 86,
+      "vin_public": null,
+      "origin_country": "Belgien",
+      "documents_available": "Zulassungsbescheinigung (Belgien), 1 Schlüssel",
+      "service_history": null,
+      "technical_inspection": null,
+      "asking_price_eur": 4500,
+      "price_on_request": false,
+      "starts": false,
+      "drivable": false,
+      "missing_parts": null,
+      "damage_assessed_at": "2026-08-20",
+      "status": "pending",
+      "published_at": "2026-08-25T09:00:00Z",
+      "created_at": "2026-08-21T10:00:00Z",
+      "updated_at": "2026-09-30T09:00:00Z",
+      "translations": [
+        {
+          "locale": "de",
+          "title": "Toyota Yaris 1.5 Hybrid – Wasserschaden",
+          "damage_summary": "Überschwemmungsschaden: Wasser bis Sitzhöhe im Innenraum, Elektrik nicht geprüft.",
+          "damage_details": "Wasserstand im Innenraum laut Spuren bis etwa Sitzunterkante. Fahrzeug springt nicht an. Hochvoltsystem nicht geprüft – Besichtigung nur mit Hinweis auf Sicherheitsrisiken.",
+          "diagnosis_notes": null,
+          "repair_notes": "Innenraum getrocknet, keine weiteren Arbeiten.",
+          "seo_title": "Toyota Yaris Hybrid mit Wasserschaden",
+          "seo_description": "Toyota Yaris 1.5 Hybrid, 2019, Wasserschaden. Fiktive Demo-Anzeige."
+        },
+        {
+          "locale": "en",
+          "title": "Toyota Yaris 1.5 Hybrid – flood damage",
+          "damage_summary": "Flood damage: water up to seat level inside, electrics not checked.",
+          "damage_details": "Marks show water inside up to roughly the lower edge of the seats. The vehicle does not start. High-voltage system not checked – inspection only with safety advice.",
+          "diagnosis_notes": null,
+          "repair_notes": "Interior dried, no further work.",
+          "seo_title": "Toyota Yaris Hybrid with flood damage",
+          "seo_description": "Toyota Yaris 1.5 Hybrid, 2019, flood damage. Fictional demo listing."
+        },
+        {
+          "locale": "fr",
+          "title": "Toyota Yaris 1.5 Hybride – dégâts des eaux",
+          "damage_summary": "Inondation : eau jusqu'à hauteur des sièges, électricité non contrôlée.",
+          "damage_details": "Les traces indiquent de l'eau dans l'habitacle jusqu'au bas des sièges environ. Le véhicule ne démarre pas. Système haute tension non contrôlé – visite uniquement avec consignes de sécurité.",
+          "diagnosis_notes": null,
+          "repair_notes": "Habitacle séché, aucun autre travail.",
+          "seo_title": "Toyota Yaris Hybride inondée",
+          "seo_description": "Toyota Yaris 1.5 Hybride, 2019, dégâts des eaux. Annonce de démonstration fictive."
+        }
+      ],
+      "damages": [
+        {
+          "category": "flood",
+          "area": "interior",
+          "severity": "severe",
+          "description": "Wasser im Innenraum bis Sitzunterkante.",
+          "translations": {
+            "en": "Water inside up to the lower edge of the seats.",
+            "fr": "Eau dans l'habitacle jusqu'au bas des sièges."
+          }
+        },
+        {
+          "category": "electrical",
+          "area": "other",
+          "severity": null,
+          "description": "Elektrik und Hochvoltsystem nicht geprüft.",
+          "translations": {
+            "en": "Electrics and high-voltage system not checked.",
+            "fr": "Électricité et système haute tension non contrôlés."
+          }
+        }
+      ],
+      "media": [
+        {
+          "storage_path": "/demo/toyota-yaris-1.svg",
+          "media_type": "image",
+          "alt_text": "Toyota Yaris Hybrid, Seitenansicht (Demo-Illustration)",
+          "caption": "Seitenansicht",
+          "is_damage_view": false,
+          "is_primary": true,
+          "sort_order": 0
+        },
+        {
+          "storage_path": "/demo/toyota-yaris-2.svg",
+          "media_type": "image",
+          "alt_text": "Innenraum mit Wasserspuren (Demo-Illustration)",
+          "caption": "Wasserspuren im Innenraum",
+          "is_damage_view": true,
+          "is_primary": false,
+          "sort_order": 1
+        }
+      ],
+      "private": { "vin_private": "VNKKG3D3X0A000003", "internal_notes": "Demo – fiktiv" }
+    },
+    {
+      "id": "a1f0c3d2-0004-4c1a-9b10-000000000004",
+      "slug": "renault-clio-v-tce-90-2020",
+      "make": "Renault",
+      "model": "Clio",
+      "variant": "V TCe 90",
+      "manufacture_year": 2020,
+      "first_registration_date": "2020-11-03",
+      "mileage_km": 41200,
+      "fuel_type": "petrol",
+      "transmission": "manual",
+      "engine_cc": 999,
+      "power_kw": 67,
+      "body_type": "hatchback",
+      "doors": 5,
+      "seats": 5,
+      "color": "Rot",
+      "euro_standard": "Euro 6d",
+      "co2_emissions_g_km": null,
+      "vin_public": null,
+      "origin_country": "Frankreich",
+      "documents_available": null,
+      "service_history": null,
+      "technical_inspection": null,
+      "asking_price_eur": 5900,
+      "price_on_request": false,
+      "starts": true,
+      "drivable": true,
+      "missing_parts": null,
+      "damage_assessed_at": "2026-09-18",
+      "status": "available",
+      "published_at": "2026-09-20T09:00:00Z",
+      "created_at": "2026-09-19T10:00:00Z",
+      "updated_at": "2026-09-20T09:00:00Z",
+      "translations": [
+        {
+          "locale": "de",
+          "title": "Renault Clio V TCe 90 – Heckschaden",
+          "damage_summary": "Heckschaden: Stoßfänger hinten und Heckklappe beschädigt.",
+          "damage_details": "Auffahrschaden hinten. Stoßfänger hinten gebrochen, Heckklappe eingedrückt und nur schwer zu öffnen. Rückleuchten intakt.",
+          "diagnosis_notes": null,
+          "repair_notes": null,
+          "seo_title": "Renault Clio V mit Heckschaden",
+          "seo_description": "Renault Clio V TCe 90, 2020, 41.200 km, Heckschaden. Fiktive Demo-Anzeige."
+        }
+      ],
+      "damages": [
+        {
+          "category": "body",
+          "area": "bumper_rear",
+          "severity": "severe",
+          "description": "Stoßfänger hinten gebrochen.",
+          "translations": {}
+        },
+        {
+          "category": "body",
+          "area": "trunk",
+          "severity": "moderate",
+          "description": "Heckklappe eingedrückt.",
+          "translations": {}
+        }
+      ],
+      "media": [
+        {
+          "storage_path": "/demo/renault-clio-1.svg",
+          "media_type": "image",
+          "alt_text": "Renault Clio V, Seitenansicht (Demo-Illustration)",
+          "caption": "Seitenansicht",
+          "is_damage_view": false,
+          "is_primary": true,
+          "sort_order": 0
+        },
+        {
+          "storage_path": "/demo/renault-clio-2.svg",
+          "media_type": "image",
+          "alt_text": "Heckschaden (Demo-Illustration)",
+          "caption": "Heckschaden",
+          "is_damage_view": true,
+          "is_primary": false,
+          "sort_order": 1
+        }
+      ],
+      "private": { "vin_private": "VF1RJA00000000004", "internal_notes": "Demo – fiktiv" }
+    },
+    {
+      "id": "a1f0c3d2-0005-4c1a-9b10-000000000005",
+      "slug": "mercedes-benz-c-220-d-2018",
+      "make": "Mercedes-Benz",
+      "model": "C-Klasse",
+      "variant": "C 220 d",
+      "manufacture_year": 2018,
+      "first_registration_date": "2018-02-14",
+      "mileage_km": 132900,
+      "fuel_type": "diesel",
+      "transmission": "automatic",
+      "engine_cc": 1950,
+      "power_kw": 143,
+      "body_type": "sedan",
+      "doors": 4,
+      "seats": 5,
+      "color": "Grau metallic",
+      "euro_standard": "Euro 6d-TEMP",
+      "co2_emissions_g_km": 117,
+      "vin_public": null,
+      "origin_country": "Deutschland",
+      "documents_available": "Zulassungsbescheinigung Teil I und II, Serviceheft",
+      "service_history": "Serviceheft vorhanden (Einträge nicht geprüft)",
+      "technical_inspection": "HU bis 02/2027",
+      "asking_price_eur": null,
+      "price_on_request": true,
+      "starts": true,
+      "drivable": true,
+      "missing_parts": null,
+      "damage_assessed_at": "2026-10-01",
+      "status": "available",
+      "published_at": "2026-10-03T09:00:00Z",
+      "created_at": "2026-10-02T10:00:00Z",
+      "updated_at": "2026-10-03T09:00:00Z",
+      "translations": [
+        {
+          "locale": "de",
+          "title": "Mercedes-Benz C 220 d – Getriebeschaden",
+          "damage_summary": "Automatikgetriebe schaltet hart, zusätzlich leichte Kratzer an der Karosserie.",
+          "damage_details": "Harte Schaltvorgänge vom 2. in den 3. Gang, Notlaufprogramm gelegentlich aktiv. Kratzer an der Tür hinten rechts.",
+          "diagnosis_notes": "Fehlerspeicher: Getriebesteuergerät meldet Druckabweichung (Auslesung 01.10.2026).",
+          "repair_notes": "Getriebeölwechsel 2025 laut Vorbesitzer (nicht belegt).",
+          "seo_title": "Mercedes C 220 d mit Getriebeschaden",
+          "seo_description": "Mercedes-Benz C 220 d, 2018, 132.900 km, Getriebeschaden. Fiktive Demo-Anzeige."
+        },
+        {
+          "locale": "en",
+          "title": "Mercedes-Benz C 220 d – gearbox damage",
+          "damage_summary": "Automatic gearbox shifts harshly, plus light scratches on the bodywork.",
+          "damage_details": "Harsh shifts from 2nd to 3rd gear, limp mode occasionally active. Scratches on the rear right door.",
+          "diagnosis_notes": "Fault memory: transmission control unit reports a pressure deviation (read on 1 Oct 2026).",
+          "repair_notes": "Gearbox oil change in 2025 according to the previous owner (not documented).",
+          "seo_title": "Mercedes C 220 d with gearbox damage",
+          "seo_description": "Mercedes-Benz C 220 d, 2018, 132,900 km, gearbox damage. Fictional demo listing."
+        },
+        {
+          "locale": "fr",
+          "title": "Mercedes-Benz C 220 d – boîte de vitesses endommagée",
+          "damage_summary": "La boîte automatique passe les rapports brutalement ; légères rayures sur la carrosserie.",
+          "damage_details": "Passages brutaux de la 2e à la 3e, mode dégradé parfois actif. Rayures sur la portière arrière droite.",
+          "diagnosis_notes": "Mémoire de défauts : le calculateur de boîte signale un écart de pression (lecture du 01/10/2026).",
+          "repair_notes": "Vidange de boîte en 2025 selon l'ancien propriétaire (non justifiée).",
+          "seo_title": "Mercedes C 220 d boîte de vitesses endommagée",
+          "seo_description": "Mercedes-Benz C 220 d, 2018, 132 900 km, boîte endommagée. Annonce de démonstration fictive."
+        }
+      ],
+      "damages": [
+        {
+          "category": "gearbox",
+          "area": "underbody",
+          "severity": "moderate",
+          "description": "Harte Schaltvorgänge, Druckabweichung im Fehlerspeicher.",
+          "translations": {
+            "en": "Harsh shifting, pressure deviation stored in fault memory.",
+            "fr": "Passages brutaux, écart de pression en mémoire de défauts."
+          }
+        },
+        {
+          "category": "body",
+          "area": "rear_right",
+          "severity": "minor",
+          "description": "Kratzer an der Tür hinten rechts.",
+          "translations": { "en": "Scratches on the rear right door.", "fr": "Rayures sur la portière arrière droite." }
+        }
+      ],
+      "media": [
+        {
+          "storage_path": "/demo/mercedes-c220d-1.svg",
+          "media_type": "image",
+          "alt_text": "Mercedes-Benz C 220 d, Seitenansicht (Demo-Illustration)",
+          "caption": "Seitenansicht",
+          "is_damage_view": false,
+          "is_primary": true,
+          "sort_order": 0
+        },
+        {
+          "storage_path": "/demo/mercedes-c220d-2.svg",
+          "media_type": "image",
+          "alt_text": "Kratzer hinten rechts (Demo-Illustration)",
+          "caption": "Kratzer Tür hinten rechts",
+          "is_damage_view": true,
+          "is_primary": false,
+          "sort_order": 1
+        }
+      ],
+      "private": { "vin_private": "WDD2050041F000005", "internal_notes": "Demo – fiktiv" }
+    },
+    {
+      "id": "a1f0c3d2-0006-4c1a-9b10-000000000006",
+      "slug": "skoda-octavia-combi-2-0-tdi-2015",
+      "make": "Škoda",
+      "model": "Octavia",
+      "variant": "Combi 2.0 TDI",
+      "manufacture_year": 2015,
+      "first_registration_date": "2015-09-30",
+      "mileage_km": 210300,
+      "fuel_type": "diesel",
+      "transmission": "manual",
+      "engine_cc": 1968,
+      "power_kw": 110,
+      "body_type": "estate",
+      "doors": 5,
+      "seats": 5,
+      "color": "Blau",
+      "euro_standard": "Euro 6",
+      "co2_emissions_g_km": null,
+      "vin_public": null,
+      "origin_country": "Deutschland",
+      "documents_available": null,
+      "service_history": null,
+      "technical_inspection": null,
+      "asking_price_eur": 2900,
+      "price_on_request": false,
+      "starts": true,
+      "drivable": false,
+      "missing_parts": null,
+      "damage_assessed_at": "2026-07-28",
+      "status": "sold",
+      "published_at": "2026-08-01T09:00:00Z",
+      "created_at": "2026-07-29T10:00:00Z",
+      "updated_at": "2026-09-15T09:00:00Z",
+      "translations": [
+        {
+          "locale": "de",
+          "title": "Škoda Octavia Combi 2.0 TDI – Fahrwerksschaden",
+          "damage_summary": "Fahrwerksschaden vorne rechts nach Bordsteinkontakt.",
+          "damage_details": "Querlenker vorne rechts verbogen, Rad steht schief. Fahrzeug nicht fahrbereit.",
+          "diagnosis_notes": null,
+          "repair_notes": null,
+          "seo_title": "Škoda Octavia Combi mit Fahrwerksschaden",
+          "seo_description": "Škoda Octavia Combi 2.0 TDI, 2015, Fahrwerksschaden. Fiktive Demo-Anzeige."
+        },
+        {
+          "locale": "fr",
+          "title": "Škoda Octavia Combi 2.0 TDI – train roulant endommagé",
+          "damage_summary": "Train avant droit endommagé après un choc contre un trottoir.",
+          "damage_details": "Triangle avant droit tordu, roue de travers. Véhicule non roulant.",
+          "diagnosis_notes": null,
+          "repair_notes": null,
+          "seo_title": "Škoda Octavia Combi train avant endommagé",
+          "seo_description": "Škoda Octavia Combi 2.0 TDI, 2015, train roulant endommagé. Annonce de démonstration fictive."
+        }
+      ],
+      "damages": [
+        {
+          "category": "chassis",
+          "area": "front_right",
+          "severity": "severe",
+          "description": "Querlenker vorne rechts verbogen.",
+          "translations": { "fr": "Triangle avant droit tordu." }
+        }
+      ],
+      "media": [
+        {
+          "storage_path": "/demo/skoda-octavia-1.svg",
+          "media_type": "image",
+          "alt_text": "Škoda Octavia Combi, Seitenansicht (Demo-Illustration)",
+          "caption": "Seitenansicht",
+          "is_damage_view": false,
+          "is_primary": true,
+          "sort_order": 0
+        }
+      ],
+      "private": { "vin_private": "TMBJJ7NE0F0000006", "internal_notes": "Demo – fiktiv" }
+    },
+    {
+      "id": "a1f0c3d2-0007-4c1a-9b10-000000000007",
+      "slug": "ford-transit-custom-2-0-ecoblue-2019",
+      "make": "Ford",
+      "model": "Transit Custom",
+      "variant": "2.0 EcoBlue",
+      "manufacture_year": 2019,
+      "first_registration_date": "2019-04-23",
+      "mileage_km": 156700,
+      "fuel_type": "diesel",
+      "transmission": "manual",
+      "engine_cc": 1995,
+      "power_kw": 96,
+      "body_type": "van",
+      "doors": 4,
+      "seats": 3,
+      "color": "Weiß",
+      "euro_standard": "Euro 6d-TEMP",
+      "co2_emissions_g_km": null,
+      "vin_public": null,
+      "origin_country": "Deutschland",
+      "documents_available": "Zulassungsbescheinigung Teil I und II",
+      "service_history": null,
+      "technical_inspection": "HU bis 05/2027",
+      "asking_price_eur": 8900,
+      "price_on_request": false,
+      "starts": true,
+      "drivable": true,
+      "missing_parts": "Seitenspiegel rechts (Glas)",
+      "damage_assessed_at": "2026-10-06",
+      "status": "available",
+      "published_at": "2026-10-08T09:00:00Z",
+      "created_at": "2026-10-07T10:00:00Z",
+      "updated_at": "2026-10-08T09:00:00Z",
+      "translations": [
+        {
+          "locale": "de",
+          "title": "Ford Transit Custom 2.0 EcoBlue – Seiten- und Dachschaden",
+          "damage_summary": "Streifschaden rechte Seite und Delle im Dach.",
+          "damage_details": "Schiebetür rechts verkratzt und eingedellt, Schiebetür lässt sich öffnen. Delle im vorderen Dachbereich. Spiegelglas rechts fehlt.",
+          "diagnosis_notes": null,
+          "repair_notes": null,
+          "seo_title": "Ford Transit Custom mit Seitenschaden",
+          "seo_description": "Ford Transit Custom, 2019, 156.700 km, Seiten- und Dachschaden. Fiktive Demo-Anzeige."
+        },
+        {
+          "locale": "en",
+          "title": "Ford Transit Custom 2.0 EcoBlue – side and roof damage",
+          "damage_summary": "Scrape damage on the right-hand side and a dent in the roof.",
+          "damage_details": "Right sliding door scratched and dented, it still opens. Dent in the front roof area. Right mirror glass missing.",
+          "diagnosis_notes": null,
+          "repair_notes": null,
+          "seo_title": "Ford Transit Custom with side damage",
+          "seo_description": "Ford Transit Custom, 2019, 156,700 km, side and roof damage. Fictional demo listing."
+        },
+        {
+          "locale": "fr",
+          "title": "Ford Transit Custom 2.0 EcoBlue – dommages côté et toit",
+          "damage_summary": "Éraflures sur le côté droit et bosse sur le toit.",
+          "damage_details": "Porte coulissante droite rayée et bosselée, elle s'ouvre encore. Bosse à l'avant du toit. Verre du rétroviseur droit manquant.",
+          "diagnosis_notes": null,
+          "repair_notes": null,
+          "seo_title": "Ford Transit Custom endommagé côté droit",
+          "seo_description": "Ford Transit Custom, 2019, 156 700 km, dommages côté et toit. Annonce de démonstration fictive."
+        }
+      ],
+      "damages": [
+        {
+          "category": "body",
+          "area": "right",
+          "severity": "moderate",
+          "description": "Schiebetür rechts verkratzt und eingedellt.",
+          "translations": {
+            "en": "Right sliding door scratched and dented.",
+            "fr": "Porte coulissante droite rayée et bosselée."
+          }
+        },
+        {
+          "category": "body",
+          "area": "roof",
+          "severity": "minor",
+          "description": "Delle im vorderen Dachbereich.",
+          "translations": { "en": "Dent in the front roof area.", "fr": "Bosse à l'avant du toit." }
+        }
+      ],
+      "media": [
+        {
+          "storage_path": "/demo/ford-transit-1.svg",
+          "media_type": "image",
+          "alt_text": "Ford Transit Custom, Seitenansicht (Demo-Illustration)",
+          "caption": "Seitenansicht",
+          "is_damage_view": false,
+          "is_primary": true,
+          "sort_order": 0
+        },
+        {
+          "storage_path": "/demo/ford-transit-2.svg",
+          "media_type": "image",
+          "alt_text": "Schaden rechte Seite (Demo-Illustration)",
+          "caption": "Schiebetür rechts",
+          "is_damage_view": true,
+          "is_primary": false,
+          "sort_order": 1
+        }
+      ],
+      "private": { "vin_private": "WF0YXXTTGYK000007", "internal_notes": "Demo – fiktiv" }
+    },
+    {
+      "id": "a1f0c3d2-0008-4c1a-9b10-000000000008",
+      "slug": "tesla-model-3-long-range-2021",
+      "make": "Tesla",
+      "model": "Model 3",
+      "variant": "Long Range AWD",
+      "manufacture_year": 2021,
+      "first_registration_date": "2021-06-10",
+      "mileage_km": 58300,
+      "fuel_type": "electric",
+      "transmission": "automatic",
+      "engine_cc": null,
+      "power_kw": 324,
+      "body_type": "sedan",
+      "doors": 4,
+      "seats": 5,
+      "color": "Blau metallic",
+      "euro_standard": null,
+      "co2_emissions_g_km": 0,
+      "vin_public": null,
+      "origin_country": "Niederlande",
+      "documents_available": "Zulassungsbescheinigung (Niederlande)",
+      "service_history": null,
+      "technical_inspection": null,
+      "asking_price_eur": null,
+      "price_on_request": true,
+      "starts": null,
+      "drivable": false,
+      "missing_parts": "Frontstoßfänger fehlt",
+      "damage_assessed_at": "2026-10-09",
+      "status": "available",
+      "published_at": "2026-10-11T09:00:00Z",
+      "created_at": "2026-10-10T10:00:00Z",
+      "updated_at": "2026-10-11T09:00:00Z",
+      "translations": [
+        {
+          "locale": "de",
+          "title": "Tesla Model 3 Long Range – Frontschaden",
+          "damage_summary": "Schwerer Frontschaden, Motorhaube und Frontstoßfänger betroffen; Startfähigkeit unbekannt.",
+          "damage_details": "Frontstoßfänger fehlt, Motorhaube stark verformt, Scheinwerfer beidseitig beschädigt. Ob das Fahrzeug startet, wurde nicht geprüft. Hochvoltbatterie äußerlich ohne sichtbare Schäden (nur Sichtprüfung).",
+          "diagnosis_notes": null,
+          "repair_notes": null,
+          "seo_title": "Tesla Model 3 Long Range mit Frontschaden",
+          "seo_description": "Tesla Model 3 Long Range, 2021, 58.300 km, Frontschaden. Fiktive Demo-Anzeige."
+        },
+        {
+          "locale": "en",
+          "title": "Tesla Model 3 Long Range – front damage",
+          "damage_summary": "Heavy front damage affecting bonnet and front bumper; unknown whether it starts.",
+          "damage_details": "Front bumper missing, bonnet badly deformed, both headlights damaged. Whether the vehicle starts has not been checked. High-voltage battery shows no visible external damage (visual check only).",
+          "diagnosis_notes": null,
+          "repair_notes": null,
+          "seo_title": "Tesla Model 3 Long Range with front damage",
+          "seo_description": "Tesla Model 3 Long Range, 2021, 58,300 km, front damage. Fictional demo listing."
+        },
+        {
+          "locale": "fr",
+          "title": "Tesla Model 3 Long Range – choc avant",
+          "damage_summary": "Choc avant important, capot et pare-chocs avant touchés ; démarrage inconnu.",
+          "damage_details": "Pare-chocs avant manquant, capot fortement déformé, deux phares endommagés. Le démarrage n'a pas été vérifié. Batterie haute tension sans dommage extérieur visible (contrôle visuel uniquement).",
+          "diagnosis_notes": null,
+          "repair_notes": null,
+          "seo_title": "Tesla Model 3 Long Range accidentée à l'avant",
+          "seo_description": "Tesla Model 3 Long Range, 2021, 58 300 km, choc avant. Annonce de démonstration fictive."
+        }
+      ],
+      "damages": [
+        {
+          "category": "body",
+          "area": "bumper_front",
+          "severity": "severe",
+          "description": "Frontstoßfänger fehlt.",
+          "translations": { "en": "Front bumper missing.", "fr": "Pare-chocs avant manquant." }
+        },
+        {
+          "category": "body",
+          "area": "hood",
+          "severity": "severe",
+          "description": "Motorhaube stark verformt.",
+          "translations": { "en": "Bonnet badly deformed.", "fr": "Capot fortement déformé." }
+        },
+        {
+          "category": "electrical",
+          "area": "front",
+          "severity": null,
+          "description": "Scheinwerfer beidseitig beschädigt, Elektrik nicht geprüft.",
+          "translations": {
+            "en": "Both headlights damaged, electrics not checked.",
+            "fr": "Deux phares endommagés, électricité non contrôlée."
+          }
+        }
+      ],
+      "media": [
+        {
+          "storage_path": "/demo/tesla-model3-1.svg",
+          "media_type": "image",
+          "alt_text": "Tesla Model 3, Seitenansicht (Demo-Illustration)",
+          "caption": "Seitenansicht",
+          "is_damage_view": false,
+          "is_primary": true,
+          "sort_order": 0
+        },
+        {
+          "storage_path": "/demo/tesla-model3-2.svg",
+          "media_type": "image",
+          "alt_text": "Frontschaden (Demo-Illustration)",
+          "caption": "Frontschaden",
+          "is_damage_view": true,
+          "is_primary": false,
+          "sort_order": 1
+        },
+        {
+          "storage_path": "/demo/tesla-model3-3.svg",
+          "media_type": "image",
+          "alt_text": "Motorhaube (Demo-Illustration)",
+          "caption": "Motorhaube verformt",
+          "is_damage_view": true,
+          "is_primary": false,
+          "sort_order": 2
+        }
+      ],
+      "private": { "vin_private": "5YJ3E7EB0MF000008", "internal_notes": "Demo – fiktiv" }
+    },
+    {
+      "id": "a1f0c3d2-0009-4c1a-9b10-000000000009",
+      "slug": "opel-corsa-f-entwurf",
+      "make": "Opel",
+      "model": "Corsa",
+      "variant": "F 1.2",
+      "manufacture_year": 2021,
+      "first_registration_date": null,
+      "mileage_km": 30000,
+      "fuel_type": "petrol",
+      "transmission": "manual",
+      "engine_cc": 1199,
+      "power_kw": 55,
+      "body_type": "hatchback",
+      "doors": 5,
+      "seats": 5,
+      "color": "Gelb",
+      "euro_standard": null,
+      "co2_emissions_g_km": null,
+      "vin_public": null,
+      "origin_country": null,
+      "documents_available": null,
+      "service_history": null,
+      "technical_inspection": null,
+      "asking_price_eur": null,
+      "price_on_request": true,
+      "starts": null,
+      "drivable": null,
+      "missing_parts": null,
+      "damage_assessed_at": null,
+      "status": "draft",
+      "published_at": null,
+      "created_at": "2026-10-13T10:00:00Z",
+      "updated_at": "2026-10-13T10:00:00Z",
+      "translations": [
+        {
+          "locale": "de",
+          "title": "Opel Corsa F (Entwurf)",
+          "damage_summary": "Entwurf – noch nicht begutachtet.",
+          "damage_details": null,
+          "diagnosis_notes": null,
+          "repair_notes": null,
+          "seo_title": null,
+          "seo_description": null
+        }
+      ],
+      "damages": [],
+      "media": [],
+      "private": { "vin_private": "W0V0000000000009", "internal_notes": "Demo – fiktiv, unveröffentlicht" }
+    }
+  ]
+}
