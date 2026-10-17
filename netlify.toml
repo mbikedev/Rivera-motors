@@ -1,0 +1,22 @@
+# Netlify configuration for the Next.js App Router site.
+# Netlify's Next.js runtime is declared explicitly so every deploy path (Git, CLI, API upload)
+# serves the App Router pages, the proxy and server actions.
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NEXT_TELEMETRY_DISABLED = "1"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Demo mode: production runs on demo data until Supabase is configured. Set back to "true" once NEXT_PUBLIC_SUPABASE_* are set.
+[context.production.environment]
+  REQUIRE_SUPABASE = "false"
+
+# Deploy previews / branch deploys may run on demo data when no Supabase variables are set.
+[context.deploy-preview.environment]
+  REQUIRE_SUPABASE = "false"
