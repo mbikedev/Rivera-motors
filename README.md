@@ -28,7 +28,8 @@ npm run dev                  # http://localhost:3000 → redirige vers /de
 
 Sans `NEXT_PUBLIC_SUPABASE_URL` / `NEXT_PUBLIC_SUPABASE_ANON_KEY`, le site public utilise les données de
 démonstration de `src/lib/data/demo/` et l’administration affiche « Supabase n’est pas configuré ».
-En production, `REQUIRE_SUPABASE=true` fait échouer le build si Supabase manque.
+Avec `REQUIRE_SUPABASE=true`, le build échoue si Supabase manque. Pour l’instant `netlify.toml` le met à
+`false` en production pour servir la démo ; repassez-le à `true` une fois Supabase configuré.
 
 ## Commandes
 

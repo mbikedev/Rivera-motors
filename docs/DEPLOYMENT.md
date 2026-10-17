@@ -72,8 +72,9 @@ select id, 'owner', 'Prénom Nom' from auth.users where email = 'admin@votre-dom
    | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | clé anon / publishable      | Tous       |
    | `NEXT_PUBLIC_SITE_URL`          | `https://votre-domaine.tld` | Production |
 
-   `REQUIRE_SUPABASE=true` est déjà défini pour la production dans `netlify.toml` : un build de production sans
-   Supabase échoue au lieu d’afficher les données de démo.
+   Dans `netlify.toml`, `REQUIRE_SUPABASE` vaut pour l’instant `false` en production (démo sans Supabase).
+   **Repassez-le à `true`** avant la vraie mise en ligne : un build de production sans Supabase échouera alors
+   au lieu d’afficher les données de démo.
    Les variables `NEXT_PUBLIC_*` sont intégrées **au moment du build** (y compris la Content-Security-Policy) :
    après toute modification, relancer un déploiement.
 
