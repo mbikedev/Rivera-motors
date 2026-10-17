@@ -2,7 +2,7 @@ import { Car } from 'lucide-react';
 import Image from 'next/image';
 import { cn } from '@/lib/utils/cn';
 
-/** next/image wrapper; local demo SVG illustrations are served unoptimised. */
+/** next/image wrapper; SVG files are served unoptimised. */
 export function VehicleImage({
   src,
   alt,

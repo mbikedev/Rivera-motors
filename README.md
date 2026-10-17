@@ -5,7 +5,8 @@ et inviter les visiteurs à une **visite sur place**. Il n’y a volontairement 
 ni paiement, ni enchère, ni financement, ni marketplace**.
 
 > « Rivera Motors GmbH », l’adresse, le téléphone et tous les véhicules livrés avec le projet sont
-> **fictifs** (données de démonstration clairement signalées par un bandeau « Demo »).
+> **fictifs** (données de démonstration clairement signalées par un bandeau « Demo »). Les photos de
+> `public/demo` sont générées par IA, ne montrent pas de véhicules réels et portent la mention « DEMO · KI-Bild ».
 
 ## Stack
 
@@ -43,7 +44,6 @@ En production, `REQUIRE_SUPABASE=true` fait échouer le build si Supabase manque
 | `npm run check`            | lint + typecheck + tests + build                                     |
 | `npm run format`           | Prettier                                                             |
 | `npm run db:seed:generate` | Régénère `supabase/seed.sql` depuis les JSON de démo                 |
-| `npm run demo:images`      | Régénère les illustrations SVG de démonstration (`public/demo`)      |
 
 `npm run test:db` utilise `DATABASE_URL` si elle est définie (**base jetable uniquement**), sinon il démarre
 un cluster PostgreSQL temporaire local (`initdb`/`pg_ctl` requis).

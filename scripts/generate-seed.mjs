@@ -96,7 +96,7 @@ for (const v of vehicles) {
   });
   for (const m of v.media) {
     out.push(
-      `insert into public.vehicle_media (vehicle_id, storage_path, media_type, alt_text, caption, is_damage_view, is_primary, sort_order) values (${q(v.id)}, ${q(m.storage_path)}, ${q(m.media_type)}, ${q(m.alt_text)}, ${q(m.caption)}, ${q(m.is_damage_view)}, ${q(m.is_primary)}, ${q(m.sort_order)});`,
+      `insert into public.vehicle_media (vehicle_id, storage_path, media_type, alt_text, caption, is_damage_view, is_primary, sort_order, width, height) values (${q(v.id)}, ${q(m.storage_path)}, ${q(m.media_type)}, ${q(m.alt_text)}, ${q(m.caption)}, ${q(m.is_damage_view)}, ${q(m.is_primary)}, ${q(m.sort_order)}, ${q(m.width ?? null)}, ${q(m.height ?? null)});`,
     );
   }
   if (v.private) {

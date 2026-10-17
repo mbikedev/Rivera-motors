@@ -9,7 +9,7 @@ const DATABASE_URL = process.env.DATABASE_URL;
 
 const ADMIN_ID = '00000000-0000-4000-8000-00000000a001';
 const USER_ID = '00000000-0000-4000-8000-00000000b001';
-const DRAFT_ID = 'a1f0c3d2-0009-4c1a-9b10-000000000009';
+const DRAFT_ID = 'a1f0c3d2-0005-4c1a-9b10-000000000005';
 const PUBLIC_ID = 'a1f0c3d2-0001-4c1a-9b10-000000000001';
 
 type Role = 'anon' | 'authenticated';
@@ -56,7 +56,7 @@ describe.skipIf(!DATABASE_URL)('RLS policies', () => {
   describe('anonymous visitor', () => {
     it('sees only published vehicles', async () => {
       const rows = await as('anon', null, async (c) => (await c.query('select id, status from public.vehicles')).rows);
-      expect(rows.length).toBe(8);
+      expect(rows.length).toBe(23);
       expect(rows.every((r) => ['available', 'pending', 'sold'].includes(r.status))).toBe(true);
       expect(rows.some((r) => r.id === DRAFT_ID)).toBe(false);
     });
@@ -155,7 +155,7 @@ describe.skipIf(!DATABASE_URL)('RLS policies', () => {
     it('sees only published vehicles and cannot write', async () => {
       await as('authenticated', USER_ID, async (c) => {
         const { rowCount } = await c.query('select 1 from public.vehicles');
-        expect(rowCount).toBe(8);
+        expect(rowCount).toBe(23);
         const priv = await c.query('select 1 from public.vehicle_private_data');
         expect(priv.rowCount).toBe(0);
       });
@@ -191,7 +191,7 @@ describe.skipIf(!DATABASE_URL)('RLS policies', () => {
     it('reads drafts and private data', async () => {
       await as('authenticated', ADMIN_ID, async (c) => {
         const { rowCount } = await c.query('select 1 from public.vehicles');
-        expect(rowCount).toBe(9);
+        expect(rowCount).toBe(24);
         const priv = await c.query('select vin_private from public.vehicle_private_data where vehicle_id = $1', [
           DRAFT_ID,
         ]);
@@ -250,8 +250,8 @@ describe.skipIf(!DATABASE_URL)('RLS policies', () => {
     it('keeps exactly one primary image per vehicle', async () => {
       await as('authenticated', ADMIN_ID, async (c) => {
         const media = await c.query(
-          'select id from public.vehicle_media where vehicle_id = $1 and not is_primary order by sort_order limit 1',
-          [PUBLIC_ID],
+          `insert into public.vehicle_media (vehicle_id, storage_path, sort_order) values ($1, $2, 1) returning id`,
+          [PUBLIC_ID, `${PUBLIC_ID}/second.webp`],
         );
         await c.query('select public.set_primary_media($1)', [media.rows[0].id]);
         const primaries = await c.query('select id from public.vehicle_media where vehicle_id = $1 and is_primary', [
@@ -267,7 +267,7 @@ describe.skipIf(!DATABASE_URL)('RLS policies', () => {
         const copy = await c.query('select status, vin_public, slug from public.vehicles where id = $1', [rows[0].id]);
         expect(copy.rows[0].status).toBe('draft');
         expect(copy.rows[0].vin_public).toBeNull();
-        expect(copy.rows[0].slug).toMatch(/^vw-golf-vii-1-4-tsi-highline-2017-copy-/);
+        expect(copy.rows[0].slug).toMatch(/^bmw-118i-2018-copy-/);
         const tr = await c.query('select count(*)::int as n from public.vehicle_translations where vehicle_id = $1', [
           rows[0].id,
         ]);

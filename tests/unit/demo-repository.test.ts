@@ -4,13 +4,13 @@ import { demoRepository } from '@/lib/data/demo-repository';
 describe('demo data source', () => {
   it('lists only public vehicles (no drafts), newest first', async () => {
     const result = await demoRepository.listVehicles({ sort: 'newest', page: 1 }, 'de');
-    expect(result.total).toBe(8);
+    expect(result.total).toBe(23);
     expect(result.items.map((v) => v.status)).not.toContain('draft');
     expect(result.items[0].slug).toBe('tesla-model-3-long-range-2021');
   });
 
   it('does not return drafts by slug', async () => {
-    expect(await demoRepository.getVehicleBySlug('opel-corsa-f-entwurf', 'de')).toBeNull();
+    expect(await demoRepository.getVehicleBySlug('opel-corsa-e-entwurf', 'de')).toBeNull();
   });
 
   it('never exposes internal data such as the full VIN', async () => {

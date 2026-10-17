@@ -50,14 +50,14 @@ test('filters are reflected in the URL and can be shared', async ({ page }) => {
 });
 
 test('there is no cart, payment, auction or financing on public pages', async ({ page }) => {
-  for (const path of ['/de', '/de/fahrzeuge', '/de/fahrzeuge/bmw-320d-touring-2016', '/en/vehicles', '/fr/vehicules']) {
+  for (const path of ['/de', '/de/fahrzeuge', '/de/fahrzeuge/bmw-x5-xdrive30d-2017', '/en/vehicles', '/fr/vehicules']) {
     await page.goto(path);
     expect(await page.locator('main').innerText()).not.toMatch(FORBIDDEN);
   }
 });
 
 test('drafts and unknown vehicles return 404', async ({ page }) => {
-  expect((await page.goto('/de/fahrzeuge/opel-corsa-f-entwurf'))?.status()).toBe(404);
+  expect((await page.goto('/de/fahrzeuge/opel-corsa-e-entwurf'))?.status()).toBe(404);
   expect((await page.goto('/en/vehicles/does-not-exist'))?.status()).toBe(404);
 });
 
