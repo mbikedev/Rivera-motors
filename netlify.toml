@@ -13,9 +13,9 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-# Production must use the real database – fail the build if Supabase variables are missing.
+# Demo mode: production runs on demo data until Supabase is configured. Set back to "true" once NEXT_PUBLIC_SUPABASE_* are set.
 [context.production.environment]
-  REQUIRE_SUPABASE = "true"
+  REQUIRE_SUPABASE = "false"
 
 # Deploy previews / branch deploys may run on demo data when no Supabase variables are set.
 [context.deploy-preview.environment]
