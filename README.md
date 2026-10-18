@@ -7,6 +7,8 @@ ni paiement, ni enchère, ni financement, ni marketplace**.
 > « Rivera Motors GmbH », l’adresse, le téléphone et tous les véhicules livrés avec le projet sont
 > **fictifs** (données de démonstration clairement signalées par un bandeau « Demo »). Les photos de
 > `public/demo` sont générées par IA, ne montrent pas de véhicules réels et portent la mention « DEMO · KI-Bild ».
+> La vidéo de l’en-tête de la page d’accueil (`public/hero/`) est un montage de ces photos, généré par
+> `bash scripts/build-hero-video.sh` (ffmpeg requis) ; elle porte aussi la mention « DEMO · KI-Bild ».
 
 ## Stack
 

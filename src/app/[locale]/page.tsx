@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { QuickSearch } from '@/components/filters/quick-search';
 import { ContactDetails } from '@/components/site/contact-details';
+import { HeroVideo } from '@/components/site/hero-video';
 import { MapEmbed } from '@/components/site/map-embed';
 import { Button } from '@/components/ui/button';
 import { VehicleGrid } from '@/components/vehicles/vehicle-grid';
@@ -53,26 +54,29 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
   return (
     <>
       <section className="bg-primary text-primary-foreground">
-        <div className="mx-auto max-w-7xl px-4 pt-14 pb-24 sm:px-6 lg:pt-20 lg:pb-28">
-          <p className="text-sm font-semibold tracking-widest text-orange-300 uppercase">{t('heroEyebrow')}</p>
-          <h1 className="mt-3 max-w-3xl text-3xl leading-tight font-bold sm:text-5xl">{heroTitle}</h1>
-          <p className="text-primary-foreground/85 mt-5 max-w-2xl text-lg">{heroSubtitle}</p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Button asChild variant="accent" size="lg">
-              <Link href="/vehicles">
-                {t('heroCta')} <ArrowRight aria-hidden />
-              </Link>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="border-white/40 bg-transparent text-white hover:bg-white/10"
-            >
-              <Link href="/visit">{t('heroSecondary')}</Link>
-            </Button>
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 pt-14 pb-24 sm:px-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] lg:pt-20 lg:pb-28">
+          <div>
+            <p className="text-sm font-semibold tracking-widest text-orange-300 uppercase">{t('heroEyebrow')}</p>
+            <h1 className="mt-3 max-w-3xl text-3xl leading-tight font-bold sm:text-5xl">{heroTitle}</h1>
+            <p className="text-primary-foreground/85 mt-5 max-w-2xl text-lg">{heroSubtitle}</p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Button asChild variant="accent" size="lg">
+                <Link href="/vehicles">
+                  {t('heroCta')} <ArrowRight aria-hidden />
+                </Link>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="border-white/40 bg-transparent text-white hover:bg-white/10"
+              >
+                <Link href="/visit">{t('heroSecondary')}</Link>
+              </Button>
+            </div>
+            <p className="text-primary-foreground/70 mt-6 text-sm">{t('noOnlineSale')}</p>
           </div>
-          <p className="text-primary-foreground/70 mt-6 text-sm">{t('noOnlineSale')}</p>
+          <HeroVideo />
         </div>
       </section>
 
