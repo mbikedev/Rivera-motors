@@ -58,7 +58,8 @@
     "step3Title": "Inspect on site",
     "step3Text": "Come by and inspect the vehicle yourself. Any purchase takes place on site only.",
     "locationTitle": "Visit us",
-    "noOnlineSale": "No online sales: no reservation and no payment on the internet."
+    "noOnlineSale": "No online sales: no reservation and no payment on the internet.",
+    "heroVideoNote": "Video made from AI-generated demo images – not real vehicles"
   },
   "vehicle": {
     "make": "Make",

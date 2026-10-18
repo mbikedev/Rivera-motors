@@ -58,7 +58,8 @@
     "step3Title": "Visiter",
     "step3Text": "Venez examiner le véhicule vous-même. Toute vente a lieu uniquement sur place.",
     "locationTitle": "Venez nous voir",
-    "noOnlineSale": "Pas de vente en ligne : ni réservation, ni paiement sur internet."
+    "noOnlineSale": "Pas de vente en ligne : ni réservation, ni paiement sur internet.",
+    "heroVideoNote": "Vidéo composée d’images de démo générées par IA – aucun véhicule réel"
   },
   "vehicle": {
     "make": "Marque",
