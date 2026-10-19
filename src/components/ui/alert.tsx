@@ -24,7 +24,8 @@ export function Alert({
       )}
     >
       <Icon className="mt-0.5 size-5 shrink-0" aria-hidden />
-      <div className="space-y-1">
+      {/* overflow-wrap: long tokens (env var names, URLs) must wrap on 320 px screens */}
+      <div className="min-w-0 space-y-1 [overflow-wrap:anywhere]">
         {title ? <p className="font-semibold">{title}</p> : null}
         {children ? <div>{children}</div> : null}
       </div>
