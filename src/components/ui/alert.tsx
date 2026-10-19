@@ -24,9 +24,9 @@ export function Alert({
       )}
     >
       <Icon className="mt-0.5 size-5 shrink-0" aria-hidden />
-      <div className="space-y-1">
+      <div className="min-w-0 space-y-1">
         {title ? <p className="font-semibold">{title}</p> : null}
-        {children ? <div>{children}</div> : null}
+        {children ? <div className="break-words">{children}</div> : null}
       </div>
     </div>
   );

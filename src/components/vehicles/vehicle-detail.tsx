@@ -96,7 +96,7 @@ export async function VehicleDetail({
   ];
 
   return (
-    <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_22rem]">
+    <div className="grid grid-cols-[minmax(0,1fr)] gap-10 lg:grid-cols-[minmax(0,1fr)_22rem]">
       <div className="min-w-0 space-y-10">
         <VehicleGallery media={vehicle.media} title={vehicle.title} />
 
@@ -130,7 +130,7 @@ export async function VehicleDetail({
         </Alert>
       </div>
 
-      <aside className="space-y-6 lg:sticky lg:top-20 lg:self-start">
+      <aside className="min-w-0 space-y-6 lg:sticky lg:top-20 lg:self-start">
         <div className="space-y-3 rounded-xl border p-5">
           <StatusBadge status={vehicle.status} />
           <p className="text-3xl font-bold">
