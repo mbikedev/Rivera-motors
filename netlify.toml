@@ -16,6 +16,7 @@
 # Demo mode: production runs on demo data until Supabase is configured. Set back to "true" once NEXT_PUBLIC_SUPABASE_* are set.
 [context.production.environment]
   REQUIRE_SUPABASE = "false"
+  NEXT_PUBLIC_SITE_URL = "https://rivera-motors.ch"
 
 # Deploy previews / branch deploys may run on demo data when no Supabase variables are set.
 [context.deploy-preview.environment]
