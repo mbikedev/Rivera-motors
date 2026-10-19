@@ -2,21 +2,15 @@
 
 import { Expand, PlayCircle } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import dynamic from 'next/dynamic';
 import { useState } from 'react';
-import Lightbox, { type Slide } from 'yet-another-react-lightbox';
-import Captions from 'yet-another-react-lightbox/plugins/captions';
-import Counter from 'yet-another-react-lightbox/plugins/counter';
-import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails';
-import Video from 'yet-another-react-lightbox/plugins/video';
-import Zoom from 'yet-another-react-lightbox/plugins/zoom';
-import 'yet-another-react-lightbox/styles.css';
-import 'yet-another-react-lightbox/plugins/captions.css';
-import 'yet-another-react-lightbox/plugins/counter.css';
-import 'yet-another-react-lightbox/plugins/thumbnails.css';
+import type { Slide } from 'yet-another-react-lightbox';
 import { Badge } from '@/components/ui/badge';
 import { VehicleImage } from '@/components/vehicles/vehicle-image';
 import type { VehicleMedia } from '@/lib/data/types';
 import { cn } from '@/lib/utils/cn';
+
+const GalleryLightbox = dynamic(() => import('./gallery-lightbox'), { ssr: false });
 
 function toSlide(media: VehicleMedia, title: string): Slide {
   if (media.mediaType === 'video') {
@@ -42,6 +36,12 @@ export function VehicleGallery({ media, title }: { media: VehicleMedia[]; title:
   const tCatalog = useTranslations('catalog');
   const [index, setIndex] = useState(-1);
   const [active, setActive] = useState(0);
+  // Mounted on first open and kept afterwards so the close animation still plays.
+  const [lightboxLoaded, setLightboxLoaded] = useState(false);
+  const openLightbox = (i: number) => {
+    setLightboxLoaded(true);
+    setIndex(i);
+  };
 
   if (media.length === 0) {
     return (
@@ -58,7 +58,7 @@ export function VehicleGallery({ media, title }: { media: VehicleMedia[]; title:
     <section aria-label={t('gallery')} className="space-y-3">
       <button
         type="button"
-        onClick={() => setIndex(active)}
+        onClick={() => openLightbox(active)}
         className="group bg-muted relative block aspect-[4/3] w-full overflow-hidden rounded-xl border"
         aria-label={t('showPhoto', { index: active + 1, count: media.length })}
       >
@@ -92,7 +92,7 @@ export function VehicleGallery({ media, title }: { media: VehicleMedia[]; title:
               <button
                 type="button"
                 onClick={() => setActive(i)}
-                onDoubleClick={() => setIndex(i)}
+                onDoubleClick={() => openLightbox(i)}
                 aria-label={t('showPhoto', { index: i + 1, count: media.length })}
                 aria-pressed={i === active}
                 className={cn(
@@ -121,17 +121,21 @@ export function VehicleGallery({ media, title }: { media: VehicleMedia[]; title:
       ) : null}
       <p className="text-muted-foreground text-xs">{t('galleryHint')}</p>
 
-      <Lightbox
-        open={index >= 0}
-        index={Math.max(index, 0)}
-        close={() => setIndex(-1)}
-        on={{ view: ({ index: i }) => setActive(i) }}
-        slides={slides}
-        plugins={[Captions, Counter, Thumbnails, Video, Zoom]}
-        zoom={{ maxZoomPixelRatio: 4, scrollToZoom: true }}
-        captions={{ descriptionTextAlign: 'center' }}
-        labels={{ Close: tc('close'), Previous: tCatalog('previous'), Next: tCatalog('next'), Lightbox: t('gallery') }}
-      />
+      {lightboxLoaded ? (
+        <GalleryLightbox
+          open={index >= 0}
+          index={Math.max(index, 0)}
+          close={() => setIndex(-1)}
+          on={{ view: ({ index: i }) => setActive(i) }}
+          slides={slides}
+          labels={{
+            Close: tc('close'),
+            Previous: tCatalog('previous'),
+            Next: tCatalog('next'),
+            Lightbox: t('gallery'),
+          }}
+        />
+      ) : null}
     </section>
   );
 }
