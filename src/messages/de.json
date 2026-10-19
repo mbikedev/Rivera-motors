@@ -58,7 +58,8 @@
     "step3Title": "Vor Ort besichtigen",
     "step3Text": "Kommen Sie vorbei und begutachten Sie das Fahrzeug selbst. Ein Kauf findet ausschließlich vor Ort statt.",
     "locationTitle": "Besuchen Sie uns",
-    "noOnlineSale": "Kein Online-Verkauf: keine Reservierung, keine Zahlung im Internet."
+    "noOnlineSale": "Kein Online-Verkauf: keine Reservierung, keine Zahlung im Internet.",
+    "heroVideoNote": "Video aus KI-generierten Demo-Bildern – keine realen Fahrzeuge"
   },
   "vehicle": {
     "make": "Marke",
