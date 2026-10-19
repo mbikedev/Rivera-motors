@@ -6,13 +6,13 @@
     "isDemo": true
   },
   "contact": {
-    "phone": "+49000000000",
-    "phoneDisplay": "+49 (0)00 000 000 (Demo)",
-    "email": "info@rivera-motors.example",
-    "street": "Beispielweg 1",
-    "postalCode": "00000",
+    "phone": "+41000000000",
+    "phoneDisplay": "+41 (0)00 000 00 00 (Demo)",
+    "email": "info@rivera-motors.ch",
+    "street": "Musterstrasse 1",
+    "postalCode": "0000",
     "city": "Musterstadt",
-    "country": "Deutschland",
+    "country": "Schweiz",
     "latitude": null,
     "longitude": null
   },
@@ -47,9 +47,9 @@
   },
   "legal": {
     "managingDirector": "Max Mustermann (fiktiv)",
-    "registerCourt": "Amtsgericht Musterstadt (Demo)",
-    "registerNumber": "HRB 00000 (Demo)",
-    "vatId": "DE000000000 (Demo)",
+    "registerCourt": "Handelsregisteramt Musterkanton (Demo)",
+    "registerNumber": "CHE-000.000.000 (Demo)",
+    "vatId": "CHE-000.000.000 MWST (Demo)",
     "responsibleForContent": "Max Mustermann (fiktiv)"
   }
 }
