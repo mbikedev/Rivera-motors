@@ -21,3 +21,11 @@
 # Deploy previews / branch deploys may run on demo data when no Supabase variables are set.
 [context.deploy-preview.environment]
   REQUIRE_SUPABASE = "false"
+
+# Temporary holding page: every URL shows public/attente.html (status 200, URL kept).
+# Remove this block to bring the full site back.
+[[redirects]]
+  from = "/*"
+  to = "/attente.html"
+  status = 200
+  force = true
